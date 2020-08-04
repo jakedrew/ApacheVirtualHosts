@@ -33,7 +33,7 @@ def avh(opts):
         run("sudo chmod -R 755 /var/www")
         run("sudo mkdir -p /var/www/%s/public_html" % site_url)
         
-        f = open("/var/www/%s/public_html/index.html" % (site_url), "w")
+        f = open("/var/www/%s/public_html/index.html" % (site_url), "w+")
         f.write("Server block for %s is now working" % (site_url))
         f.close()
 
@@ -54,7 +54,7 @@ def avh(opts):
             </VirtualHost>
         """ % site_url
 
-        f = open("/etc/apache2/sites-available/%s.conf" % (site_url), "w")
+        f = open("/etc/apache2/sites-available/%s.conf" % (site_url), "w+")
         f.write(file_contents)
         f.close()
 
