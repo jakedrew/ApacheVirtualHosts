@@ -61,10 +61,9 @@ def avh(opts):
         run("sudo a2ensite %s" % site_url)
         run("sudo service apache2 restart")
 
-    # subprocess.call("git checkout -b '%s'" % opts.branch, shell=True)
-
 def run(command):
-    print command
+    # print command
+    subprocess.call(command, shell=True)
 
 def init():
     # print AGENT
