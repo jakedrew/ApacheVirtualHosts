@@ -37,7 +37,7 @@ def avh(opts):
         f.write("Server block for %s is now working" % (site_url))
         f.close()
 
-        file_contents = "<VirtualHost *:80>\n\tServerName %s\n\tServerAlias www.%s\n\tServerAdmin webmaster@%s\n\tDocumentRoot /var/www/%s/public_html\n\n\n\t<Directory /var/www/%s/public_html>\n\t\tOptions -Indexes +FollowSymLinks\n\t\tAllowOverride All\n\t</Directory>\n\n\n\tErrorLog ${APACHE_LOG_DIR}/%s-error.log\n\tCustomLog ${APACHE_LOG_DIR}/%s-access.log combined\n</VirtualHost>\n" % site_url
+        file_contents = "<VirtualHost *:80>\n\tServerName %s\n\tServerAlias www.%s\n\tServerAdmin webmaster@%s\n\tDocumentRoot /var/www/%s/public_html\n\n\n\t<Directory /var/www/%s/public_html>\n\t\tOptions -Indexes +FollowSymLinks\n\t\tAllowOverride All\n\t</Directory>\n\n\n\tErrorLog ${APACHE_LOG_DIR}/%s-error.log\n\tCustomLog ${APACHE_LOG_DIR}/%s-access.log combined\n</VirtualHost>\n" % (site_url,site_url,site_url,site_url,site_url,site_url,site_url)
 
         f = open("/etc/apache2/sites-available/%s.conf" % (site_url), "w+")
         f.write(file_contents)
