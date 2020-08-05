@@ -44,7 +44,7 @@ def avh(opts):
         f.close()
 
         run("sudo a2ensite %s" % site_url)
-        run("sudo service apache2 restart")
+        run("sudo systemctl reload apache2")
 
 def run(command):
     # print command
