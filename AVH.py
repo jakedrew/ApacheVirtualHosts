@@ -5,12 +5,12 @@
 
 import re, sys, time, optparse, fileinput, subprocess
 
-__version__ = "v0.0.1a"
+__version__ = "v0.0.2a"
 
 USAGE = "%prog [options]"
 VERSION = "%prog v" + __version__
 
-AGENT = "%s / %s - Built By DrwDigital" % ("AVH", __version__)
+AGENT = "%s / %s - Built By Jake Drew" % ("AVH", __version__)
 
 def parse_options():
 
